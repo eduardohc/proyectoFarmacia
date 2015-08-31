@@ -60,7 +60,7 @@ public class Ventas extends JFrame {
 	 */
 	public Ventas() {
 		setTitle("Venta");
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(340, 50, 900, 562);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));

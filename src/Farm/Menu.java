@@ -78,6 +78,8 @@ public class Menu extends JFrame {
 		btnSalir.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
+				Login login = new Login();
+				login.setVisible(true);
 				dispose();
 			}
 		});

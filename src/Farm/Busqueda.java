@@ -66,7 +66,7 @@ public class Busqueda extends JFrame {
 	 */
 	public Busqueda() {
 		setTitle("Busqueda");
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(300, 130, 950, 400);
 		contentPane = new JPanel();
 		contentPane.setForeground(new Color(255, 0, 255));

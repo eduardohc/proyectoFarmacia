@@ -59,7 +59,7 @@ public class Notificaciones extends JFrame {
 	 */
 	public Notificaciones() {
 		setTitle("Proximas Citas");
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(450, 160, 724, 390);
 		contentPane = new JPanel();
 		contentPane.setForeground(new Color(255, 0, 255));

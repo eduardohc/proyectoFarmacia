@@ -56,7 +56,7 @@ public class Registro extends JFrame {
 	 */
 	public Registro() {
 		setTitle("Registro de Producto");
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(340, 130, 740, 450);
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(95, 158, 160));

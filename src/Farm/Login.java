@@ -32,8 +32,8 @@ import java.awt.Color;
 public class Login extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField txt1;
-	private JPasswordField txt2;
+	private JTextField usuario;
+	private JPasswordField contrasena;
 	private JButton btnEntrar;
 	private JButton btnSalir;
 	private JLabel text2;
@@ -64,7 +64,7 @@ public class Login extends JFrame {
 	 * Create the frame.
 	 */
 	public Login() {
-		setTitle("Login");
+		setTitle("Farmacias Monterrey S. A.");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(420, 140, 571, 351);
 		contentPane = new JPanel();
@@ -73,43 +73,47 @@ public class Login extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
+		lblIniciarSesion = new JLabel("INICIAR SESION");
+		lblIniciarSesion.setFont(new Font("Tahoma", Font.PLAIN, 32));
+		lblIniciarSesion.setForeground(Color.PINK);
+		lblIniciarSesion.setBounds(160, 32, 240, 31);
+		contentPane.add(lblIniciarSesion);
+		
 		JLabel lblid = new JLabel("Usuario:");
 		lblid.setForeground(Color.PINK);
 		lblid.setFont(new Font("Century Gothic", Font.BOLD, 16));
-		lblid.setBounds(76, 98, 86, 22);
+		lblid.setBounds(70, 98, 86, 22);
 		contentPane.add(lblid);
+		
+		usuario = new JTextField();
+		usuario.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		usuario.setBounds(170, 99, 207, 22);
+		contentPane.add(usuario);
+		usuario.setColumns(10);
 		
 		text2 = new JLabel("Contrase\u00F1a: ");
 		text2.setForeground(Color.PINK);
 		text2.setFont(new Font("Century Gothic", Font.BOLD, 16));
-		text2.setBounds(73, 142, 120, 22);
+		text2.setBounds(70, 134, 120, 22);
 		contentPane.add(text2);
 		
-		txt1 = new JTextField();
-		txt1.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		txt1.setBounds(172, 99, 207, 22);
-		contentPane.add(txt1);
-		txt1.setColumns(10);
-		
-		txt2 = new JPasswordField();
-		txt2.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		txt2.setBounds(172, 143, 207, 22);
-		contentPane.add(txt2);
+		contrasena = new JPasswordField();
+		contrasena.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		contrasena.setBounds(170, 135, 207, 22);
+		contentPane.add(contrasena);
 		
 		btnEntrar = new JButton("Entrar");
 		btnEntrar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				
 				String Contraseña_id = "Farmacia";
-				
 				String Contraseña = "medicina";
 				
 				String contra_id = "";
 				String contra = "";
 				
-				
-				contra_id = txt1.getText();
-				contra = txt2.getText();
+				contra_id = usuario.getText();
+				contra = contrasena.getText();
 				
 				
 				if(Contraseña_id.equals(contra_id))
@@ -119,30 +123,22 @@ public class Login extends JFrame {
 						Menu menu = new Menu();
 						menu.setVisible(true);
 						dispose();
-						
 				    }
 					else
 					{
-						label_1.setVisible(true);
+						//label_1.setVisible(true);
 						JOptionPane.showMessageDialog(null, "Contraseña Incorrecta");
-						
-					
 					}
 				}
 				else
 				{
 					label.setVisible(true);
 					label_1.setVisible(true);
-					JOptionPane.showMessageDialog(null, "Error de Usuario o Contraseña. \nPor favor intentelo nuevamente");
-					
-					
-				}
-				
-			
-				
+					JOptionPane.showMessageDialog(null, "Error de Usuario o Contraseña. \nPor favor intentelo nuevamente");	
+				}				
 			}
 		});
-		btnEntrar.setBounds(425, 223, 89, 31);
+		btnEntrar.setBounds(187, 177, 175, 30);
 		contentPane.add(btnEntrar);
 		
 		btnSalir = new JButton("Salir");
@@ -152,16 +148,10 @@ public class Login extends JFrame {
 				dispose();
 			}
 		});
-		btnSalir.setBounds(425, 257, 89, 31);
+		btnSalir.setBounds(187, 217, 175, 30);
 		contentPane.add(btnSalir);
 		
-		lblIniciarSesion = new JLabel("INICIAR SESION");
-		lblIniciarSesion.setFont(new Font("Tahoma", Font.PLAIN, 32));
-		lblIniciarSesion.setForeground(Color.PINK);
-		lblIniciarSesion.setBounds(160, 32, 240, 31);
-		contentPane.add(lblIniciarSesion);
-		
-		label_4 = new JLabel("");
+		/*label_4 = new JLabel("");
 		label_4.setIcon(new ImageIcon(Login.class.getResource("/Farm/Image/Contrase\u00F1a.png")));
 		label_4.setBounds(278, 188, 126, 119);
 		contentPane.add(label_4);
@@ -169,7 +159,7 @@ public class Login extends JFrame {
 		label_3 = new JLabel("");
 		label_3.setIcon(new ImageIcon(Login.class.getResource("/Farm/Image/Usuario.png")));
 		label_3.setBounds(403, 0, 89, 105);
-		contentPane.add(label_3);
+		contentPane.add(label_3);*/
 		
 		label = new JLabel("");
 		label.setIcon(new ImageIcon(Login.class.getResource("/Farm/Image/eliminar-eliminar-la-salida-icono-9161-16.png")));

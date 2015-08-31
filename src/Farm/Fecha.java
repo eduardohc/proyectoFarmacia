@@ -64,7 +64,7 @@ public class Fecha extends JFrame {
 	 */
 	public Fecha() {
 		setTitle("Agendar una Fecha");
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(350, 60, 560, 470);
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(0, 51, 102));
